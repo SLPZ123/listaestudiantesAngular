@@ -1,0 +1,43 @@
+<div class="row" id="rowcard">
+    <div class="card" id="cards" style="width: 18rem;">
+        <img src="https://i.ytimg.com/vi/rbuYtrNUxg4/maxresdefault.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">CURSO INTRODUCCION HTML</h5>
+        <button class="btn bg-warning" id="botoneleccion">ACCEDER</button>
+        </div>
+    </div>
+    <div class="card" id="cards" style="width: 18rem;">
+        <img src="https://i.ytimg.com/vi/xnWtGNiG2lg/maxresdefault.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">CURSO JAVASCRIPT</h5>
+        <button class="btn bg-warning" id="botoneleccion">ACCEDER</button>
+        </div>
+    </div>
+    <div class="card" id="cards" style="width: 18rem;">
+        <img src="https://escuela.it/storage/course_images/portada-curso-angular-avanzado-53.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">ANGULAR</h5>
+        <button class="btn bg-warning" id="botoneleccion">ACCEDER</button>
+        </div>
+    </div>
+</div>
+    <h1>Estudiantes</h1>
+
+
+    <div class="row" id="rowcard">
+
+     <div *ngFor="let Alumno of ALUMNOS" class="col-4">
+            
+        <div class="card" id="cards" style="width: 14rem;">
+            <img src="{{Alumno.ficha}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 [ngClass]=" Alumno.edad <22 ? 'bg-success ' : 'bg-primary'"  class="card-title">Nombre : {{Alumno.nombre | titlecase}}
+                </h5>
+                <h4 class="card-title"> {{Alumno.curso}} </h4>
+                <h5>Inscripcion {{ Alumno.fecha | date: 'medium'}}</h5>
+            </div>
+        </div>
+       
+        </div>
+        
+</div>
